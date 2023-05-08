@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_170sdp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_popup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_2sdp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_8sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_2sdp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_2sdp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_2sdp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/_8sdp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_translation"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@color/blue1"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_translation"
+            app:contentPadding="@dimen/_4sdp"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintTop_toTopOf="@id/top"
+            app:shapeAppearanceOverlay="@style/circular_shape"
+            app:strokeColor="@color/black3"
+            app:strokeWidth="@dimen/_2sdp"
+            app:tint="@color/blue" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_translate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="@string/translate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_translation"
+            app:layout_constraintEnd_toStartOf="@id/ic_options_arrow"
+            app:layout_constraintStart_toEndOf="@id/ic_translation"
+            app:layout_constraintTop_toTopOf="@id/ic_translation" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_options_arrow"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:background="@color/blue1"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_arrow_down"
+            android:tag="true"
+            app:contentPadding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_translate"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintTop_toTopOf="@id/txt_translate"
+            app:shapeAppearanceOverlay="@style/circular_shape"
+            app:strokeColor="@color/black3"
+            app:strokeWidth="@dimen/_2sdp"
+            app:tint="@color/blue" />
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/black3"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintTop_toBottomOf="@id/ic_translation" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_options_gp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintTop_toBottomOf="@id/view_one"
+            app:layout_constraintStart_toStartOf="@id/start">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/in_hindi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/in_hindi"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/_8ssp"
+                android:layout_marginHorizontal="2dp"
+                android:fontFamily="@font/raleway"
+                app:strokeColor="@color/black3"
+                app:strokeWidth="@dimen/_1sdp"
+                android:textAllCaps="false"
+                app:rippleColor="@color/white"
+                app:cornerRadius="@dimen/_16sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/in_japanese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/in_japanese"
+                android:textColor="@color/blue"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/raleway"
+                app:strokeColor="@color/black3"
+                app:strokeWidth="@dimen/_1sdp"
+                android:textAllCaps="false"
+                app:rippleColor="@color/white"
+                app:cornerRadius="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/in_hindi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/in_spanish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/in_spanish"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/_8ssp"
+                android:layout_marginHorizontal="2dp"
+                android:fontFamily="@font/raleway"
+                app:strokeColor="@color/black3"
+                app:strokeWidth="@dimen/_1sdp"
+                app:rippleColor="@color/white"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/in_japanese"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_two"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/black3"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/end"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintTop_toBottomOf="@id/constraint_options_gp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/txt_generate_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/bottom"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintTop_toBottomOf="@id/view_two"
+            app:layout_constraintEnd_toEndOf="@id/end">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ic_generate_image"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@color/blue1"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_image"
+                app:contentPadding="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circular_shape"
+                app:strokeColor="@color/black3"
+                app:strokeWidth="@dimen/_2sdp"
+                app:tint="@color/blue" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="@string/generate_image"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ic_generate_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_generate_image"
+                app:layout_constraintTop_toTopOf="@id/ic_generate_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

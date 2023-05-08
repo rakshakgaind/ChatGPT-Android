@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_15sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ic_chat_gpt"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:background="@color/blue"
+        android:padding="1.5dp"
+        android:src="@drawable/ic_chat_gpt"
+        app:contentPadding="5dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/constraint"
+        app:layout_constraintBottom_toTopOf="@id/constraint"
+        app:shapeAppearanceOverlay="@style/circular_shape"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:background="@drawable/bg_answer_white_three_rounded"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@id/ic_chat_gpt"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:maxWidth="@dimen/_235sdp"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_response"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:visibility="gone"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_answer"/>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_circular"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:elevation="@dimen/_13sdp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:trackColor="@color/blue"
+            app:indicatorColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/img_response"
+            app:layout_constraintEnd_toEndOf="@id/img_response"
+            app:layout_constraintStart_toStartOf="@id/img_response"
+            app:layout_constraintTop_toTopOf="@id/img_response"
+             />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_sound"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/blue1"
+            android:padding="2dp"
+            android:src="@drawable/ic_sound_mute"
+            app:contentPadding="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_options"
+            app:layout_constraintTop_toTopOf="@id/ic_options"
+            app:layout_constraintEnd_toStartOf="@id/ic_copy"
+            app:shapeAppearanceOverlay="@style/circular_shape"
+            app:strokeColor="@color/black3"
+            app:strokeWidth="2dp"
+            app:tint="@color/blue" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_copy"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/blue1"
+            android:padding="2dp"
+            android:src="@drawable/ic_copy"
+            app:contentPadding="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_options"
+            app:layout_constraintEnd_toStartOf="@id/ic_options"
+            app:layout_constraintTop_toTopOf="@id/ic_options"
+            app:shapeAppearanceOverlay="@style/circular_shape"
+            app:strokeColor="@color/black3"
+            app:strokeWidth="2dp"
+            app:tint="@color/blue" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_options"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/blue1"
+            android:padding="2dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_add"
+            app:contentPadding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_response"
+            app:shapeAppearanceOverlay="@style/circular_shape"
+            app:strokeColor="@color/black3"
+            app:strokeWidth="2dp"
+            app:tint="@color/blue" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

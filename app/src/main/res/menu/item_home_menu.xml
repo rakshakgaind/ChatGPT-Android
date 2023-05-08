@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/select_language"
+        android:title="@string/please_choose_language">
+        <menu>
+            <item
+                android:id="@+id/to_hindi"
+                android:title="@string/translate_to_hindi"
+                 />
+            <item
+                android:id="@+id/to_japanese"
+                android:title="@string/translate_to_japanese"
+                />
+            <item
+                android:id="@+id/to_punjabi"
+                android:title="@string/translate_to_punjabi"
+                />
+            <item
+                android:id="@+id/ask_question"
+                android:title="@string/ask_question"
+                />
+            <item
+                android:id="@+id/footer_spacer_1"
+                android:checkable="false"
+                android:enabled="false"
+                android:orderInCategory="200"
+                android:title="" />
+        </menu>
+    </item>
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/generate_image"
+        android:orderInCategory="200"
+        android:title="@string/generate_image"
+        app:actionViewClass="com.google.android.material.switchmaterial.SwitchMaterial"
+        app:showAsAction="always"
+        />
+    </group>
+</menu>
